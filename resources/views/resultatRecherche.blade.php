@@ -26,7 +26,7 @@
             margin-top: 100px;
         }
         h1 {
-            color: white;
+            color: orange;
             font-size: 50px;
             text-align: center;
             margin-bottom: 20px;
@@ -50,7 +50,7 @@
         <h1>Résultat de la recherche</h1>
         <div class="result">
             @if(isset($employe))
-                <p>L'employé attribué à ce bien est : <span style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">{{ $employe->nom_complet }}</span></p>
+                <p style="color:white">L'employé attribué à ce bien est : <span style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">{{ $employe->nom_complet }}</span></p>
             @else
                 <p>Aucun employé n'est attribué à ce bien.</p>
             @endif

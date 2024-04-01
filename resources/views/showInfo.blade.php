@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body{
             background: url("./imgs/a1.jpg") no-repeat;
         }
+        
         h1{
             color: white;
             font-family: roboto;
-            text-align: center;
+            margin-left: 150px;
             margin-bottom: 10px;
             color: rgb(255, 171, 74);
-            text-decoration-line:underline;
+        
         }
         table {
-            background: linear-gradient(rgb(206, 114, 255),rgb(105, 79, 206));
+            /* background-color: rgb(42, 61, 102); */
+            opacity:30px;
+            background: linear-gradient(rgb(42, 61, 102),rgb(16, 31, 52));
             /* background:linear-gradient(80deg,rgb(255, 114, 142),rgb(255, 160, 99)); */
             color: white;
             font-size: 1.2rem;
@@ -28,7 +32,9 @@
             margin-bottom: 40px;
         }
         th{
-            color: black;
+            color: rgb(235, 217, 221);
+            text-transform: uppercase;
+            
         }
         
         th, td {
@@ -37,7 +43,7 @@
             text-align: center;
         }
         tr:hover {
-            background: linear-gradient(80deg,rgb(160, 92, 197),rgb(124, 102, 214));
+            background: linear-gradient(80deg,rgb(42, 61, 102),rgb(62, 57, 83));
         }
         .actions a {
             padding: 5px 10px;
@@ -48,7 +54,8 @@
         }
     .pagination {
     display: flex;
-    justify-content: center;
+    margin-left: 150px;
+    /* justify-content: center; */
    
 }
 
@@ -60,14 +67,14 @@
 .pagination a {
     padding: 8px 12px;
     text-decoration: none;
-    background:linear-gradient(80deg,rgb(255, 114, 142),rgb(255, 160, 99));
+    background:linear-gradient(80deg,rgb(131, 78, 89),rgb(146, 106, 81));
     color: white;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 .pagination a:hover {
-    background-color:  rgb(231, 189, 141);
+    background-color:  rgb(202, 164, 120);
 }
 
 .pagination .disabled {
@@ -88,11 +95,64 @@
     
 }
 
-
-
+  .n{
+        margin-left: 35%;
+        
+        max-width: 960px; 
+        backdrop-filter: blur(15px) brightness(80%);
+   }
+    .navbar {
+            background-color: rgb(221, 233, 248,0.7)!important;
+          
+            /* background: linear-gradient(rgb(123, 104, 133),rgb(107, 100, 134)); */
+            backdrop-filter: blur(15px) brightness(80%);
+            margin-bottom: 40px;
+            position: relative;
+            padding: 10px; /* Ajustez selon vos besoins */
+            backdrop-filter: 20
+        }
+        
+        .navbar-nav .nav-link {
+            color: rgb(8, 22, 38) !important; /* Couleur du texte des liens */
+            font-size: 1.2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            /* margin-left: 50px; */
+            
+        }
+        
+        
+        .logo{
+            width: 160px;
+            
+        }
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        
+        <img src="/imgs/logo.png" alt="" class="logo">
+        
+        <div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-left: 50px">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/ajouterBien') }}">Ajouter un Bien</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/ajouterEmploye') }}">Ajouter un Employé</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/attribuer') }}">Attribuer un Bien</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/attributions') }}">Liste des Attributions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/recherche') }}">Recherche</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
     @if (session('success'))
     <h2 style="color: #57d85e">{{ session('success') }}</h2>
     @endif

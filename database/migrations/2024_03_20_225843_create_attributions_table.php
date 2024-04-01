@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('attributions', function (Blueprint $table) {
             $table->id();
-            $table->date('date_attribution')->default(now());
+            $table->date('date_attribution');
             $table->date('date_retour')->nullable();
             $table->unsignedBigInteger('id_bien');
             $table->foreign('id_bien')->references('id')->on('biens')->onDelete('cascade');

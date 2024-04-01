@@ -31,7 +31,8 @@ Route::middleware('auth')->group(function(){
     Route::get('/attribuer', [attributionController::class, 'showAttribution']);
     Route::post('/attribuer-traiter', [attributionController::class, 'attribution']);
     Route::get('/attributions', [attributionController::class, 'show'])->name('attributions.index');
-    Route::post('/attributions/{id}/return', [AttributionController::class, 'return'])->name('attribution.return');
+    
+    Route::post('/attributions/{id}/return', [AttributionController::class, 'returnBien'])->name('attribution.return');
     
     
     Route::get('/recherche', [attributionController::class, 'recherche']);

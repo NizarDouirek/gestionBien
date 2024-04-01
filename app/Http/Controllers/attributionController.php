@@ -15,12 +15,14 @@ class attributionController extends Controller
         $employes = Employe::all();
         return view('attribution', compact('biens', 'employes'));
     }
+    
     public function attribution(Request $request)
     {
         DB::table('attributions')->insert([
             'id_bien' => $request->id_bien,
             'id_employe' => $request->id_employe,
             'created_at' => now(),
+            'date_attribution'=>now(),
         ]);
         return redirect('/attributions');
     }
@@ -60,14 +62,16 @@ class attributionController extends Controller
     }
 
 
-    public function return(Request $request, $id)
-    {
-        $dateRetour = now();
+    public function returnBien(Request $request, $id)
+{
+    
+    
+    $dateRetour = now();
+    DB::update('update attributions set date_retour=? where id=?',[$dateRetour, $id]);
+    // DB::table('attributions')
+    //     ->where('id', $id)
+    //     ->update(['date_retour' => $dateRetour]);
 
-        DB::table('attributions')
-            ->where('id', $id)
-            ->update(['date_retour' => $dateRetour]);
-
-        return redirect()->route('attributions.index', $id)->with('success', 'Le bien a été retourné avec succès.');
-    }
+    return redirect()->route('attributions.index')->with('success', 'Le bien a été retourné avec succès.');
+}
 }

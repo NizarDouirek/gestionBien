@@ -49,8 +49,8 @@ class bienController extends Controller
         }
 
         public function showInfo(){
-            $biens= Bien::paginate(10);
-            $employes= Employe::paginate(10);  
+            $biens= Bien::paginate(5);
+            $employes= Employe::paginate(5);  
             return view('showinfo',compact('biens','employes'));
             }
 
