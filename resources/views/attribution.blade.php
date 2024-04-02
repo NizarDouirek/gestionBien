@@ -97,10 +97,68 @@
             font-size: 1.4em;
             font-weight: 600;
         }
+        .navbar {
+            background-color: rgb(221, 233, 248,0.7)!important;
+            display: flex;
+            /* background: linear-gradient(rgb(123, 104, 133),rgb(107, 100, 134)); */
+            backdrop-filter: blur(15px) brightness(80%);
+            margin-bottom: 40px;
+            position: relative;
+            position: fixed;
+            top: 0; 
+            width: 100%;
+            padding: 2px; /* Ajustez selon vos besoins */
+            backdrop-filter: 20;
+            align-items: center;
+        }
+        
+        .navbar-nav .nav-link {
+            color: rgb(8, 22, 38) !important; /* Couleur du texte des liens */
+            font-size: 1.2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            /* margin-left: 50px; */   
+        } 
+        .navbar-nav {
+            display: flex;
+            list-style: none; 
+            gap: 2rem;
+        }
+        a{
+            text-decoration-line: none;
+        }
+
+        .logo{
+            width: 170px;
+            margin-left: 5px;
+        }
     </style>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        
+        <img src="/imgs/logo.png" alt="" class="logo">
+        
+        <div class="collapse navbar-collapse" id="navbarNavDropdown" style="margin-left: 50px">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/ajouterBien') }}">Ajouter un Bien</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/ajouterEmploye') }}">Ajouter un Employé</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/attribuer') }}">Attribuer un Bien</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/attributions') }}">Liste des Attributions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/recherche') }}">Recherche</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
         <h1>Formulaire d'attribution</h1><br>
         <form action="/attribuer-traiter" method="post">
