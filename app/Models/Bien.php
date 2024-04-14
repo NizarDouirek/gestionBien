@@ -12,6 +12,10 @@ class Bien extends Model
          'code',
          'description',
          'marque',
-         'etat'
+         'etat',
+         'occupe'
+    ];
+    protected $hidden = [
+        'occupe'
     ];
 }

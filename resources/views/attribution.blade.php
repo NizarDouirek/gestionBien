@@ -160,6 +160,7 @@
         </div>
     </nav>
     <div class="container">
+        
         <h1>Formulaire d'attribution</h1><br>
         <form action="/attribuer-traiter" method="post">
             @csrf
@@ -178,6 +179,9 @@
             <button type="submit">Attribuer</button>
         </form>
     </div>
+    @if(session('succes'))
+    <h1>{{session('succes')}}</h1>
+    @endif
 </body>
 
 </html>

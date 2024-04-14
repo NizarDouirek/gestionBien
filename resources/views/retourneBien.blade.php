@@ -140,8 +140,10 @@
                             @else
                                 <form action="{{ route('attribution.return', $attribution->id) }}" method="POST"
                                      onsubmit="return confirm('Êtes-vous sûr de vouloir retourner ce bien ?')">
+
                                     @csrf
-                                    <button type="submit">Retourner le bien</button>
+                                    <input type="hidden" value='{{$attribution->id_bien}}' name="id_bien">
+                                    <button type="submit">Retourner le bien </button>
                                 </form>
                             @endif
                         </td>

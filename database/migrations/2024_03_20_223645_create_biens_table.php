@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('description');
             $table->string('marque');
             $table->string('etat');
-            $table->timestamps();
+            $table->boolean('occupe')->default(false);
+             $table->timestamps();
         });
     }
 
