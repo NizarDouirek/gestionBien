@@ -205,7 +205,7 @@
                         <h2>Enregistrement de Biens</h2>
                         <div class="inputbox"> <ion-icon name="document-text-outline"></ion-icon>
                             <input  type="text" name="code" min="0"  required  pattern="[0-9]+"
-                            title="Le numéro de téléphone doit comporter que les chiffres">
+                            title="Le code doit comporter que les chiffres">
                             <label>Code</label>
                         </div>
                         <div class="inputbox"> 

@@ -131,6 +131,9 @@
             width: 170px;
             margin-left: 5px;
         }
+        .msg{
+            margin-right: 150px;
+        }
     </style>
 </head>
 
@@ -178,10 +181,12 @@
             </select><br>
             <button type="submit">Attribuer</button>
         </form>
-    </div>
+    </div><br>
+    <div class="msg">
     @if(session('succes'))
     <h1>{{session('succes')}}</h1>
     @endif
+   </div>
 </body>
 
 </html>
