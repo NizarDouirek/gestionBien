@@ -147,23 +147,22 @@
                             <input type="hidden" name="id" value="{{$employes->id}}"/>
                             <div class="inputbox">
                                 <ion-icon name="document-text-outline"></ion-icon>
-                                <input type="text" value="{{$employes->num_Identification}}" name="num_Identification" required>
+                                <input type="text" value="{{$employes->num_Identification}}" name="num_Identification" required
+                                pattern="[0-9]+" title="Le numéro de téléphone doit comporter que les chiffres">
                                 <label>num_Identification</label>
                             </div>
                             <div class="inputbox"> <ion-icon name="person-outline"></ion-icon>  
-                                <input type="text" value="{{$employes->nom_complet}}" name="nom_complet"  required> 
+                                <input type="text" value="{{$employes->nom_complet}}" name="nom_complet"  required
+                                pattern="[A-Za-z]+" title="vous devez entrez un nom valide"> 
                                 <label>nom_complet</label> </div>
                             <div class="inputbox"> <ion-icon name="call-outline"></ion-icon> 
                                 <input type="text" value="{{$employes->num_telephone}}" name="num_telephone" required
-                                pattern="[0-9]+"
-                                title="Le numéro de téléphone doit comporter que les chiffres">
+                                pattern="[0-9]+" title="Le numéro de téléphone doit comporter que les chiffres">
                                 <label>num_telephone</label> </div> <br>                           
-                        
-                                <button>Modifier</button>
+                            <button>Modifier</button>
                             
                         </form>
-                    
-                    </div>
+                     </div>
                 </div>
             </section> 
     </body>

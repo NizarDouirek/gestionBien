@@ -210,13 +210,13 @@
                         </div>
                         <div class="inputbox"> 
                             <ion-icon name="pricetag-outline"></ion-icon> 
-                            <input type="text" name="description"  required/> 
+                            <input type="text" name="description"  required pattern="[A-Za-z]+" title="vous devez entrez une description valide"/> 
                             <label>Description</label> </div>
                         <div class="inputbox"> <ion-icon name="construct-outline"></ion-icon> 
-                            <input type="text" name="marque" required>
+                            <input type="text" name="marque" pattern="[A-Za-z]+" title="vous devez entrez une marque" required>
                             <label>Marque</label> </div>
                         <div class="inputbox"> <ion-icon name="hammer-outline"></ion-icon> 
-                            <input type="text" name="etat"  required> 
+                            <input type="text" name="etat"  required pattern="[A-Za-z]+" title="vous devez entrez l'etat"> 
                             <label>Etat</label> </div>
                         <button>ENREGISTRER</button>
                         

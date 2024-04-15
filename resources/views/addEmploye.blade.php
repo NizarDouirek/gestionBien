@@ -208,11 +208,11 @@
                             <ion-icon name="document-text-outline"></ion-icon> 
                             <input type="number" name="num_Identification" required 
                             pattern="[0-9]+"
-                             title="Le numéro de téléphone doit comporter que les chiffres">
+                             title="Le numéro d'Identification doit comporter que les chiffres">
                             <label>Num_Identification</label>
                         </div>
                         <div class="inputbox"> <ion-icon name="person-outline"></ion-icon> 
-                            <input type="text" name="nom_complet" required> 
+                            <input type="text" name="nom_complet" required pattern="[A-Za-z]+" title="vous devez entrez un nom valable"> 
                             <label>Nom_complet</label> </div>
                         <div class="inputbox"> <ion-icon name="call-outline"></ion-icon> 
                             <input type="text" name="num_telephone" required  pattern="[0-9]+"

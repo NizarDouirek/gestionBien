@@ -151,13 +151,16 @@
                             <label>Code</label>
                         </div>
                         <div class="inputbox"> <ion-icon name="pricetag-outline"></ion-icon> 
-                            <input type="text" value="{{$biens->description}}" name="description"  required> 
+                            <input type="text" value="{{$biens->description}}" name="description"  required pattern="[A-Za-z]+"
+                             title="vous devez entrez une description valide"> 
                             <label>Description</label> </div>
                         <div class="inputbox"> <ion-icon name="construct-outline"></ion-icon> 
-                            <input type="text" value="{{$biens->marque}}" name="marque" required>
+                            <input type="text" value="{{$biens->marque}}" name="marque" required pattern="[A-Za-z]+" 
+                            title="vous devez entrez une marque valide">
                             <label>Marque</label> </div>
                             <div class="inputbox"> <ion-icon name="hammer-outline"></ion-icon> 
-                                <input type="text" value="{{$biens->etat}}" name="etat"  required> 
+                                <input type="text" value="{{$biens->etat}}" name="etat"  required pattern="[A-Za-z]+"
+                                 title="vous devez entrez l'etat "> 
                                 <label>Etat</label> </div>
                             
                         <button>Modifier</button>

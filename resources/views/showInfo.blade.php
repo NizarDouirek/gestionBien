@@ -13,11 +13,14 @@
         }
 
         h1 {
-            color: white;
+            color:wheat;
             font-family: roboto;
             margin-left: 150px;
             margin-bottom: 10px;
-            color: rgb(255, 171, 74);
+            
+            /* background:rgb(160, 148, 233);  */
+            display: inline-block;
+            
 
         }
 
@@ -93,12 +96,16 @@
 
         .pagination .prev,
         .pagination .next {
-            padding: 8px 20px;
-            background: linear-gradient(80deg, rgb(255, 114, 142), rgb(255, 160, 99));
+            padding: 6px 10px;
+            /* background: linear-gradient(80deg, rgb(197, 135, 148), rgb(202, 159, 132)); */
+            background: transparent;
+            color: white;
             font-family: robotot;
-            font-size: 1.2rem;
-            margin-bottom: 50px;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            margin-left: 1100px;
             border-radius: 5px;
+            letter-spacing: 0.3                                          ch;
 
         }
 
@@ -162,7 +169,7 @@
     @if (session('success'))
         <h2 style="color: #57d85e">{{ session('success') }}</h2>
     @endif
-    <h1>liste Bien</h1>
+    <h1>listes Bien</h1>
     <table>
         <thead>
             <tr>
@@ -201,14 +208,13 @@
             <a class="next" href="{{ $biens->nextPageUrl() }}">Suivant</a>
         @endif
     </div><br>
-    <h1>liste Employe</h1>
+    <h1>listes Employe</h1>
     <table>
         <thead>
             <tr>
                 <th>Nom complet</th>
                 <th>Numéro d'Identification</th>
-
-                <th>Téléphone</th>
+               <th>Téléphone</th>
                 <th class="actions">Actions</th>
             </tr>
         </thead>
